@@ -7,8 +7,8 @@ class History(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     file_path = db.Column(db.String(255), nullable=False)
-    latitude = db.Column(db.Numeric(10, 7), nullable=False)
-    longitude = db.Column(db.Numeric(10, 7), nullable=False)
+    latitude = db.Column(db.Numeric(10, 7), nullable=True)
+    longitude = db.Column(db.Numeric(10, 7), nullable=True)
     created_at = db.Column(db.DateTime, nullable=False, server_default=func.now())
     ai_title = db.Column(db.String(255))
     ai_description = db.Column(db.Text)
